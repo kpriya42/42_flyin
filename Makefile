@@ -2,12 +2,12 @@ PYTHON := python3
 VENV := flyinenv
 VENV_PYTHON := $(VENV)/bin/python3
 
-MAIN := src/flyin.py
+MAIN := src/main.py
 CONFIG ?= maps/easy/01_linear_path.txt
 REQUIREMENTS := requirements.txt
 
 install:
-	$(PYTHON) -m venv $(VENV)
+	test -d $(VENV) || $(PYTHON) -m venv $(VENV)
 	$(VENV_PYTHON) -m pip install --upgrade pip
 	$(VENV_PYTHON) -m pip install -r $(REQUIREMENTS)
 
