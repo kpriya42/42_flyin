@@ -1,3 +1,5 @@
+
+
 class ZoneTypes(enum):
     NORMAL = "normal"
     RESTRICTED = "restricted"
@@ -26,7 +28,7 @@ class Zone:
     name: str
     x: int
     y: int
-    ztype: ZoneTypes
+    zone_type: ZoneTypes
     color: ZoneColors
     max_drones: int
 

@@ -6,7 +6,9 @@ def main() -> None:
         print("Correct Usage: python3 main.py <map_file.txt>")
         return
     
-    path_map = sys.argv[1]
+    file_path = sys.argv[1]
+
+
 
     
 
