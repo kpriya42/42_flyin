@@ -21,7 +21,7 @@ class ConfigParser:
     def __init__(self, path:str) -> None:
         self.path = path
     
-    def parse(self) -> NetworkConfig:
+    def parsetxt(self) -> NetworkConfig:
         nb_drones: int
         start_hub: str
         end_hub: str
@@ -32,10 +32,10 @@ class ConfigParser:
 
         with config_location.open("r", encoding="utf-8") as file:
             for line_number, line in enumerate(file, start=1):
-                line = line.split("#", 1)[0].strip()
-
-                if not line:
+                line = line.strip()
+                if not line or line.startswith("#"):
                     continue
+
                 
                 
 

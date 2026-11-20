@@ -1,12 +1,12 @@
+from enum import Enum
 
-
-class ZoneTypes(enum):
+class ZoneTypes(Enum):
     NORMAL = "normal"
     RESTRICTED = "restricted"
     PRIORITY = "priority"
     BLOCKED = "blocked"
 
-class ZoneColors(enum):
+class ZoneColors(Enum):
     GOLD = "gold"
     BLACK = "black"
     RED = "red"
